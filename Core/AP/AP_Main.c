@@ -60,15 +60,21 @@ void modeStateCheck()
 }
 void modeStateRun()
 {
+	static uint32_t prevTime = 0;
+	uint32_t curTime = HAL_GetTick();
+
 	switch (modeState)
 	{
 		case LED1_ON:
-			if (timeTick != 0)
+			if(curTime - prevTime < 200)
 				return;
+			prevTime = curTime;
+//			if (timeTick != 0)
+//				return;
 			LED_toggle(&LED_1);
 			LED_OFF(&LED_2);
 			LED_OFF(&LED_3);
-			timeTick = 200;
+//			timeTick = 200;
 			break;
 
 		case LED2_3_ON:
@@ -109,4 +115,6 @@ int APMain()
 		modeStateCheck();
 		modeStateRun();
 	}
+
+	return 0;
 }

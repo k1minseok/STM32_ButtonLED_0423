@@ -20,7 +20,10 @@ typedef enum{
 	LED1_3_ON
 }LEDState_t;
 
+void SystickCallback();
 void sys_init();
+void modeStateCheck();
+void modeStateRun();
 int APMain();
 
 #endif /* AP_AP_MAIN_H_ */

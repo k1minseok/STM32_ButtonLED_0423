@@ -2,4 +2,4 @@
 ../Core/AP/AP_Main.c:24:6:sys_init	1
 ../Core/AP/AP_Main.c:37:6:modeStateCheck	4
 ../Core/AP/AP_Main.c:61:6:modeStateRun	9
-../Core/AP/AP_Main.c:103:5:APMain	1
+../Core/AP/AP_Main.c:109:5:APMain	1
